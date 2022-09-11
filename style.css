@@ -1,0 +1,363 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+}
+.nav{
+    background: linear-gradient(#ff469f, #ff6062);
+    font-family: sans-serif;
+    height: 100px;
+}
+label.logo{
+	color: white;
+	font-size: 30px;
+	line-height: 80px;
+	padding: 0 50px;
+	font-weight: bold;
+}
+.nav input{
+	font-size: 50px;
+	background: white;
+	justify-content: space-between;
+	height: 4vh;
+	border-radius: 8px;
+	width: 250px;
+	transition: all 0.5s;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: white;
+	color: inherit;
+	font: inherit;
+	outline: none;
+	color: rgba(114, 114, 114);
+}
+.nav input::placeholder{
+	color: #fb5383;
+	padding-left: 15px;
+}
+.nav input{
+	flex: 1;
+}
+.nav .fa-search{
+	cursor: pointer;
+	color: white;
+	animation: none;
+}
+.fa-search{
+	color: rgba(109, 109, 109);
+}
+ul{
+	float: right;
+	margin-right: 20px;
+}
+ul li{
+    display: inline-block;
+	position: relative;
+	line-height: 80px;
+	margin: 0 5px;
+}
+ul li a{
+    text-align: center;
+	width: 120px;
+    text-decoration: none;
+	font-size: 17px;
+	text-align: center;
+	padding: 17px 13px;
+	border-radius: 3px;
+	font-family: century Gothic;
+	font-weight: bold;
+	color: white;
+}
+a.active,a:hover{
+	background: linear-gradient(#ff46da, #ff6062);
+}
+.search{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	background: white;
+	border-radius: 60px;
+	transition: 0.5s;
+	box-shadow: 0 0 0 5px  #ff469f;
+}
+.row{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 100px 0;
+}
+.col-1{
+	flex-basis: 40%;
+	position: relative;
+	margin-left: 50px;
+}
+.col-1 h2{
+	font-size: 54px;
+}
+.col-1 h3{
+	font-size: 30px;
+	color: #707070;
+	font-weight: 100;
+	margin: 20px 0 10px;
+}
+.col-1 p{
+	font-size: 16px;
+	color: #b7b7b7;
+	font-weight: 100;
+}
+.col-1 h4{
+	margin: 30px 0;
+	font-size: 20px;
+}
+button{
+	width: 140px;
+	border: 0;
+	padding: 12px 10px;
+	outline: none;
+	color: #fff;
+	background: linear-gradient(to right, #fb5383, #ff3527);
+	border-radius: 6px;
+	cursor: pointer;
+}
+button img{
+	width: 30px;
+	display: none;
+}
+button:hover{
+	width: 160px;
+	align-items: center;
+	justify-content: space-between;
+}
+.col-1::after{
+	content: '';
+	width: 10px;
+	height: 57%;
+	background: linear-gradient(#ff469f, #ff6062);
+	position: absolute;
+	left: -40px;
+	top: 8px;
+}
+.col-2{
+	position: relative;
+	flex-basis: 60%;
+	display: flex;
+	align-items: center;
+	margin-right: 30px;
+}
+.col-2 .iphone{
+	width: 50%;
+}
+.color-box{
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: linear-gradient(#ff469f, #ff575a);
+	height: 100%;
+	width: 55%;
+	z-index: -1;
+	transform: translateX(150px);
+	border-radius: 50px;
+}
+.add-btn img{
+	width: 35px;
+	margin-bottom: 5px;
+	margin-left: 60px;
+}
+.add-btn{
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+}
+.add-btn p{
+	margin-left: 60px;
+}
+.taille-image{
+	width: 200px;
+	height: 200px;
+}
+.center-image{
+	text-align: center;
+}
+.main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+.wrap{
+	margin: 2rem;
+	transform-style: preserve-3d;
+	transform: perspective(100rem);
+}
+.container{
+	--rx:0;
+	--ry:0;
+	--bx:50%;
+	--by:50%;
+	width: 20rem;
+	height: 35rem;
+	border: 1px solid var(--background-color);
+	border-radius: 1.6rem;
+	position: relative;
+	transform: rotateX(calc(var(--rx) = 1deg)) rotateY(calc(var(--ry) = 1deg));
+	background: white;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+	transition: transform .6s 1s ;
+}
+.container::before,
+.container::after{
+	content: "";
+	width: 2rem;
+	height: 2rem;
+	border: 1px solid #fff;
+	position: absolute;
+	z-index: 2;
+	opacity: .3;
+	transition: .3;
+}
+.container::before{
+	top: 2rem;
+	right: 2rem;
+	border-bottom-width: 0;
+	border-left-width: 0;
+}
+.container::after{
+	bottom: 2rem;
+	left: 2rem;
+	border-top-width: 0;
+	border-right-width: 0;
+}
+.container--active{
+	transition: none;
+}
+.container--2{
+	filter: hue-rotate(80deg) saturate(140%);
+}
+.container--3{
+	filter: hue-rotate(160deg) saturate(140%);
+}
+.container p{
+	font-size: 1.9rem;
+}
+.phone-infos{
+	padding-left: 5%;
+}
+.title-phone{
+	font-size: 3em;
+	font-weight: bold;
+}
+.price-phone{
+	color: rgb(254, 19, 141);
+	font-weight: bold;
+	font-size: 2em;
+	float: right;
+	margin-right: 0.5em;
+}
+.btn-block{
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.buy .add button{
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+	transition: background 400ms;
+	color: #fff;
+	padding: 1rem  2rem;
+	margin-top: 5rem;
+	font-size: 1.5rem;
+	outline: none;
+	border: none;
+	width: 130px;
+	height: 40px;
+	border-radius: 10px;
+	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+.buy{
+	background: #6200ee;
+	margin-left: 30px;
+	margin-top: 70px;
+}
+.add{
+	background: #ee1851;
+	margin-top: 20px;
+	margin-left: 30px;
+}
+.stars{
+	position: absolute;
+	top: 70%;
+	left: 25%;
+	transform: translate(-50%, -50%) rotate(180deg);
+	display: flex;
+}
+.stars label{
+	display: block;
+	width: 25px;
+	padding-left: 7px;
+}
+.stars label::before{
+	content: '\f005';
+	font-family: 'Font Awesome 5 free';
+	font-weight: 900;
+	position: relative;
+	display: block;
+	font-size: 15px;
+	color: #ccc;
+}
+.stars input{
+	display: none;
+}
+.stars label::after{
+	content: '\f005';
+	font-family: 'Font Awesome 5 free';
+	font-weight: 900;
+	position: absolute;
+	display: block;
+	font-size: 15px;
+	color: #fff000;
+	top: 0;
+	opacity: 0;
+	transition: 0.5s;
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+.stars label:hover::after,
+.stars label:hover ~label::after,
+.stars input:checked  ~label::after{
+	opacity: 1;
+}
+@media (max-width: 750px){
+	.nav{
+		height: 25vh;
+	}
+	label.logo{
+		color: white;
+		margin-bottom: 60px;
+	}
+	.nav ul a,
+	.nav ul a.active{
+		margin-bottom: 30px;
+		color: white;
+		position: relative;
+		right: 100px;
+		background:  #fb5383;
+	}
+	.nav ul a:hover,
+	.nav ul a.active:hover{
+		background-color: #f353fb;
+		color: white;
+	}
+	.nav input{
+		width: 175px;
+		left: 20px;
+	}
+	img.iphone{
+		width: 90%;
+		height: 50vh;
+	}
+	.color-box{
+		width: 90%;
+	}
+}
